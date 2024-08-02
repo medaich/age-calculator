@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/medaich/age-calculator)
-- Live Site URL: [Vercel](https://age-calculator.vercel.app/)
+- Live Site URL: [Vercel](https://age-calculator-medaich.vercel.app/)
 
 ## My process
 
