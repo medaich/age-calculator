@@ -1,9 +1,7 @@
+import Calculator from "./Calculator";
+
 function App() {
-  return (
-    <div>
-      <h1>hello world!</h1>
-    </div>
-  );
+  return <Calculator />;
 }
 
 export default App;
