@@ -1,21 +1,9 @@
-function formatDigits(num) {
-  return num.toLocaleString("en-US", {
-    minimumIntegerDigits: 2,
-    useGrouping: false,
-  });
-}
+import React from "react";
+import AnimatedNumber from "./AnimatedNumber";
+import EmptyAge from "./EmptyAge";
 
 function Age({ age }) {
-  if (!age)
-    return (
-      <div className="mt-8">
-        <blockquote className="text-5xl font-extrabold italic sm:text-[4rem]">
-          <span className="text-primary-purple">--</span> years <br />
-          <span className="text-primary-purple">--</span> months <br />
-          <span className="text-primary-purple">--</span> days
-        </blockquote>
-      </div>
-    );
+  if (!age) return <EmptyAge />;
 
   const { days, months, years } = age;
 
@@ -23,17 +11,17 @@ function Age({ age }) {
     <div className="mt-8">
       <blockquote className="text-5xl font-extrabold italic transition-all duration-300 sm:text-[4rem]">
         <span className="text-primary-purple">
-          {!years ? "00" : formatDigits(years)}
+          <AnimatedNumber value={years || 0} />
         </span>
         {years === 1 ? " year" : " years"}
         <br />
         <span className="text-primary-purple">
-          {!months ? "00" : formatDigits(months)}
+          <AnimatedNumber value={months || 0} />
         </span>
         {months === 1 ? " month" : " months"}
         <br />
         <span className="text-primary-purple">
-          {!days ? "00" : formatDigits(days)}
+          <AnimatedNumber value={days || 0} />
         </span>
         {days === 1 ? " day" : " days"}
       </blockquote>

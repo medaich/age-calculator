@@ -1,8 +1,9 @@
 function Button() {
   return (
-    <button className="absolute z-10 m-auto block w-16 rounded-full bg-primary-purple p-5 text-center hover:bg-neutral-off-black max-md:left-1/2 max-md:-translate-x-1/2 max-md:transform md:right-0">
-      <p className="hidden">Calculate</p>
-
+    <button
+      aria-label="calculate"
+      className="absolute z-10 m-auto block w-16 rounded-full bg-primary-purple p-5 text-center hover:bg-neutral-off-black focus:outline-none focus:ring-2 focus:ring-primary-purple focus:ring-offset-2 focus:hover:ring-neutral-off-black max-md:left-1/2 max-md:-translate-x-1/2 max-md:transform md:right-0"
+    >
       <svg
         className="w-full rounded-full"
         xmlns="http://www.w3.org/2000/svg"
